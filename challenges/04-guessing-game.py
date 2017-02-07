@@ -11,16 +11,14 @@ def check(choice, guess, tries):
         print("Bad input, try again")
         guess = input("Guess again \n")
         check(choice, guess, tries)
+    tries += 1
     if choice == guess:
-        tries += 1
         print(f"You got it in {tries} tries")
     elif choice > guess:
-        tries +=1
         print(f"The number is higher than {guess}")
         guess = input("Guess again \n")
         check(choice, guess, tries)
     elif choice < guess:
-        tries +=1
         print(f"The number is lower than {guess}")
         guess = input("Guess again \n")
         check(choice, guess, tries)
